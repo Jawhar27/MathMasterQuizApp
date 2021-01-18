@@ -4,6 +4,7 @@ import 'package:mathquiz/screens/quizScreen.dart';
 class MathOperator extends StatelessWidget {
   final String operatorType;
   final Icon icon;
+
   MathOperator({@required this.operatorType, @required this.icon});
   @override
   Widget build(BuildContext context) {
@@ -19,9 +20,10 @@ class MathOperator extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10))),
         child: Row(
           children: [
+            SizedBox(width: 5),
             icon,
             Container(
-              margin: EdgeInsets.only(left: 60),
+              margin: EdgeInsets.only(left: 65),
               child: Text(
                 operatorType,
                 style: TextStyle(

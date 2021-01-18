@@ -10,11 +10,11 @@ class AppHeader extends StatelessWidget {
           Text(
             "math",
             style: TextStyle(
-                fontSize: 23, color: Colors.white, fontWeight: FontWeight.bold),
+                fontSize: 21, color: Colors.white, fontWeight: FontWeight.bold),
           ),
           Text("master",
               style: TextStyle(
-                  fontSize: 15,
+                  fontSize: 14,
                   color: Colors.white,
                   fontWeight: FontWeight.bold))
         ],

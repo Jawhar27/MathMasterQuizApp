@@ -22,7 +22,7 @@ class MainScreen extends StatelessWidget {
               AppHeader(),
               MathOperator(
                   operatorType: "ADDITION",
-                  icon: Icon(Icons.add, color: Colors.green[200])),
+                  icon: Icon(Icons.add, size: 30.0, color: Colors.green[300])),
               SizedBox(
                 height: 20,
               ),
@@ -43,7 +43,7 @@ class MainScreen extends StatelessWidget {
               ),
               MathOperator(
                   operatorType: "DIVISION",
-                  icon: Icon(Icons.add, color: Colors.green[200])),
+                  icon: Icon(Icons.ac_unit, color: Colors.green[200])),
             ],
           ),
         ),
