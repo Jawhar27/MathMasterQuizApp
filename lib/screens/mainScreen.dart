@@ -43,7 +43,7 @@ class MainScreen extends StatelessWidget {
               ),
               MathOperator(
                   operatorType: "DIVISION",
-                  icon: Icon(Icons.ac_unit, color: Colors.green[200])),
+                  icon: Icon(Icons.format_italic, color: Colors.green[200])),
             ],
           ),
         ),
