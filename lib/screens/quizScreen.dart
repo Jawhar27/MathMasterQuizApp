@@ -93,17 +93,18 @@ class _QuizScreenState extends State<QuizScreen> {
       return;
     }
 
-    int correctAnsLocation = random.nextInt(3);
+    int correctAnsLocation = random.nextInt(4);
     int inCorrectAns;
-    for (int i = 0; i < 3; i++) {
+    for (int i = 0; i < 4; i++) {
       if (i == correctAnsLocation) {
-        optionList.add(correctAns);
-      }
-      inCorrectAns = random.nextInt(20);
-      if (correctAns == inCorrectAns) {
+        optionList.insert(correctAnsLocation, correctAns);
+      } else {
         inCorrectAns = random.nextInt(20);
+        if (correctAns == inCorrectAns) {
+          inCorrectAns = random.nextInt(20);
+        }
+        optionList.insert(i, inCorrectAns);
       }
-      optionList.add(inCorrectAns);
     }
   }
 
