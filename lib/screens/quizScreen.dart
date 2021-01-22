@@ -78,32 +78,29 @@ class _QuizScreenState extends State<QuizScreen> {
     if (type == "ADDITION") {
       question = '$first+$second ?';
       correctAns = first + second;
-    }
-    if (type == "SUBTRACTION") {
+    } else if (type == "SUBTRACTION") {
       question = '$first-$second ?';
 
       correctAns = first - second;
-    }
-    if (type == "MULTIPLICATION") {
+    } else if (type == "MULTIPLICATION") {
       question = '$first*$second ?';
       correctAns = first * second;
-    }
-    if (type == "DIVISION") {
+    } else if (type == "DIVISION") {
       question = '$first/$second ?';
-      if (second == 0) {
-        return;
-      }
+
       correctAns = (first / second).floor();
+    } else {
+      return;
     }
 
-    int correctAnsLocation = random.nextInt(4);
+    int correctAnsLocation = random.nextInt(3);
     int inCorrectAns;
     for (int i = 0; i < 3; i++) {
       if (i == correctAnsLocation) {
         optionList.add(correctAns);
       }
       inCorrectAns = random.nextInt(20);
-      while (correctAns == inCorrectAns) {
+      if (correctAns == inCorrectAns) {
         inCorrectAns = random.nextInt(20);
       }
       optionList.add(inCorrectAns);
